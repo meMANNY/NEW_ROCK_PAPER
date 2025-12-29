@@ -127,4 +127,23 @@ function playRound(humanChoice) {
 }   
 
 
+function resetGame() {
+    humanScore = 0;
+    computerScore = 0;
+    round = 1;
+    
+    humanScoreSpanEl.textContent = humanScore;
+    computerScoreSpanEl.textContent = computerScore;
+    roundEl.textContent = `Round ${round}`;
+    resultMessage.textContent = "Choose your weapon!";
+    resultMessage.classList.remove("win", "lose", "tie");
+    choicesDisplayEl.textContent = "";
+    
+    setButtonsDisabled(false);
+    playAgainBtn.style.display = "none";
+}
+
+
+
+
 
