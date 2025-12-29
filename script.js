@@ -1,7 +1,7 @@
 const rockBtn = document.getElementById("rock");
 const paperBtn = document.getElementById("paper");
 const scissorsBtn = document.getElementById("scissors");
-const resultMessage = document.getElementById("result");
+const resultMessage = document.getElementById("result-message");
 const playAgainBtn = document.getElementById("play-again");
 const humanScoreSpanEl = document.getElementById("human-score");
 const computerScoreSpanEl = document.getElementById("computer-score");
@@ -143,6 +143,12 @@ function resetGame() {
     playAgainBtn.style.display = "none";
 }
 
+rockBtn.addEventListener("click", () => playRound("rock"));
+paperBtn.addEventListener("click", () => playRound("paper"));
+scissorsBtn.addEventListener("click", () => playRound("scissors"));
+playAgainBtn.addEventListener("click", resetGame);
+
+console.log("Game script loaded.");
 
 
 
