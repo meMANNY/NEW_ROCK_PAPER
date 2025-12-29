@@ -121,3 +121,26 @@ h1{
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
+
+.round-info {
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.result {
+    min-height: 80px;
+    margin-bottom: 20px;
+}
+
+#result-message {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+#choices-display {
+    color: var(--text-secondary);
+    font-size: 1rem;
+}
