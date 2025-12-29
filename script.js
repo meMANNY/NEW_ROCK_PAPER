@@ -20,3 +20,32 @@ function getComputerChoice() {
     return choices[randomIndex];
 }
 
+
+function getEmoji(choice) {
+    const emojis = {
+        rock: '🪨',
+        paper: '📄',
+        scissors: '✂️'
+    };
+    return emojis[choice];
+}
+
+function determineWinner(humanChoice, computerChoice) {
+
+    if (humanChoice === computerChoice) {
+        return "It's a tie!";
+    }
+}
+
+const winConditions = {
+    rock: "scissors",
+    paper: "rock",
+    scissors: "paper"
+};
+
+if (winConditions[humanChoice] === computerChoice) {
+    return 'win';
+} else {
+    return 'lose';
+
+}
