@@ -101,5 +101,30 @@ function showFinalResult() {
 
 }
 
+function playRound(humanChoice) {
+
+    const computerChoice = getComputerChoice();
+    const result = determineWinner(humanChoice, computerChoice);
+
+    if (result === 'win') {
+        humanScore++;
+        humanScoreSpanEl.textContent = humanScore;
+    } else if (result === 'lose') {
+        computerScore++;
+        computerScoreSpanEl.textContent = computerScore;
+
+    }
+
+    updateResultMessage(humanChoice, computerChoice, result);
+
+    if (round >= totalRounds) {
+        showFinalResult();
+    } else {
+        round++;
+        roundEl.textContent = `Round ${round}`;
+    }
+
+}   
+
 
 
