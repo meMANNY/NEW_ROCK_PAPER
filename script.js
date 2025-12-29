@@ -73,3 +73,33 @@ function updateResultMessage(humanChoice, computerChoice, outcome) {
     }
 }
 
+function setButtonsDisabled(state) {
+    choiceButton.forEach(button => {
+        button.disabled = state;
+    });
+}
+
+function showFinalResult() {
+
+    choicesDisplayEl.textContent = `Final Score - You: ${humanScore} | Computer: ${computerScore}`;
+    resultMessage.classList.remove("win", "lose", "tie");
+
+    if(humanScore > computerScore) {
+        resultMessage.textContent = "Congratulations! You won the game!";
+        resultMessage.classList.add("win");
+
+    }else if(humanScore < computerScore) {
+        resultMessage.textContent = "Sorry, you lost the game.";
+        resultMessage.classList.add("lose");
+    }else {
+        resultMessage.textContent = "It's a tie game.";
+        resultMessage.classList.add("tie");
+    }
+
+    setButtonsDisabled(true);
+    playAgainBtn.style.display = "inline-block";
+
+}
+
+
+
