@@ -144,3 +144,37 @@ h1{
     color: var(--text-secondary);
     font-size: 1rem;
 }
+
+.win {
+    color: var(--win-color) !important;
+}
+
+.lose {
+    color: var(--lose-color) !important;
+}
+
+.tie {
+    color: var(--tie-color) !important;
+}
+
+.play-again-btn {
+    background: linear-gradient(135deg, var(--accent), #ff6b6b);
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(233, 69, 96, 0.4);
+}
+
+.play-again-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(233, 69, 96, 0.5);
+}
+
+.play-again-btn:active {
+    transform: translateY(0);
+}
