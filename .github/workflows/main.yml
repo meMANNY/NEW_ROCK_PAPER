@@ -1,0 +1,27 @@
+name: Build WF
+on: 
+  push: 
+    branches:
+      - main
+  pull_request: 
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Build step placeholder
+        run: echo "Add your build commands here"
+    
+  testing:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Testing step placeholder
+        run: echo "Add your testing commands here"
